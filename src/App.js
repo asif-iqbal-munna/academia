@@ -8,7 +8,13 @@ function App() {
     <Router>
       <Header />
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/home">
+          <Home />
+        </Route>
+        <Route exact path="/courses">
           <Home />
         </Route>
       </Switch>

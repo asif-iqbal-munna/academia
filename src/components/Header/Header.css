@@ -1,0 +1,28 @@
+.banner {
+  background: radial-gradient(at center center, #ffffffab 0%, #ffffffab 100%),
+    url(../../images/header_image.jpg);
+  height: 90vh;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header .menu-link:hover {
+  color: #0dcaf0 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .width-all {
+    width: 100% !important;
+  }
+
+  .heading-small {
+    font-size: 23px !important;
+  }
+  .small-bg-color {
+    background-color: #31d2f2d5;
+    margin: 0 !important;
+    padding: 10px;
+  }
+}

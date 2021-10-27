@@ -1,29 +1,75 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import {
+  Container,
+  FormControl,
+  InputGroup,
+  Nav,
+  Navbar,
+} from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
   return (
-    <header className="header">
-      <Navbar expand="lg">
+    <header className="banner text-white position-relative">
+      <Navbar
+        collapseOnSelect
+        fixed="top"
+        expand="lg"
+        className="position-absolute w-100"
+      >
         <Container>
-          <Navbar.Brand as={Link} to="/">
-            Academia
+          <Navbar.Brand
+            as={Link}
+            to="/"
+            className="text-dark fs-2 fw-bold fst-italic"
+          >
+            academia
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link as={Link} to="/">
+            <Nav className="ms-auto text-dark small-bg-color fs-5 fw-bolder">
+              <Nav.Link
+                className="menu-link"
+                as={NavLink}
+                activeStyle={{
+                  fontWeight: "bold",
+                  color: "#110df0",
+                }}
+                to="/"
+              >
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/courses">
+              <Nav.Link
+                className="menu-link"
+                as={NavLink}
+                activeStyle={{
+                  fontWeight: "bold",
+                  color: "#110df0",
+                }}
+                to="/courses"
+              >
                 Courses
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <div className="position-absolute top-50 start-50 translate-middle w-75">
+        <h2 className="text-dark fs-2 fw-bolder heading-small d-flex justify-content-center">
+          Expand your career opportunities with Us
+        </h2>
+        <InputGroup className="my-3 w-50 width-all mx-auto">
+          <FormControl
+            placeholder="Search"
+            aria-label="Search"
+            aria-describedby="basic-addon2"
+          />
+          <InputGroup.Text id="basic-addon2" className="btn-info text-white">
+            Search
+          </InputGroup.Text>
+        </InputGroup>
+      </div>
     </header>
   );
 };

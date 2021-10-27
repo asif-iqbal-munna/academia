@@ -8,7 +8,7 @@ const Register = () => {
 
   return (
     <div className="my-5">
-      <h2 className="text-center fw-bold">Register The Course</h2>
+      <h2 className="text-center fw-bold">Register For The Program</h2>
       <div className="w-50 p-5 rounded-3 mx-auto bg-light">
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* <input {...register("firstName", { required: true, maxLength: 20 })} />
@@ -46,7 +46,7 @@ const Register = () => {
               {...register("date", { required: true })}
             />
           </FloatingLabel>
-          <FloatingLabel controlId="floatingInputGrid" label="Course Name">
+          <FloatingLabel controlId="floatingInputGrid" label="Program Name">
             <Form.Control
               className="mb-3"
               type="text"

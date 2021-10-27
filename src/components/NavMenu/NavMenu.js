@@ -45,18 +45,7 @@ const NavMenu = ({ bgColor }) => {
               }}
               to="/courses"
             >
-              My Courses
-            </Nav.Link>
-            <Nav.Link
-              className="menu-link"
-              as={NavLink}
-              activeStyle={{
-                fontWeight: "bold",
-                color: "#110df0",
-              }}
-              to="/launchCourse"
-            >
-              Launch Course
+              My Programs
             </Nav.Link>
             <div className="ms-md-3">
               <Link to="/register">

@@ -16,7 +16,7 @@ const Mentors = () => {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link eventKey="second" className="cursor-pointer">
-                Launch A Course
+                Launch Program
               </Nav.Link>
             </Nav.Item>
           </Nav>

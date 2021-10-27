@@ -1,26 +1,35 @@
+import axios from "axios";
 import React from "react";
 import { Col, FloatingLabel, Form, Row, Tab, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
 const LaunchCourse = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (data) => {
+    axios.post("http://localhost:8080/programs", data).then((res) => {
+      if (res.data.insertedId) {
+        alert("Your Program Is Added Successfully");
+        reset();
+      }
+    });
+    // console.log(data);
+  };
   return (
     <Tab.Pane eventKey="second">
-      <h2 className="">Second another thing</h2>
+      <h2 className="text-center fw-bold">Launch A Program</h2>
       <div className="p-4 bg-light rounded-3">
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridPassword">
               <FloatingLabel
                 controlId="floatingTextarea"
-                label="Full Name"
+                label="Title"
                 className="mb-3"
               >
                 <Form.Control
                   type="text"
-                  placeholder="Full Name"
-                  {...register("name", {
+                  placeholder="Title"
+                  {...register("title", {
                     required: true,
                   })}
                 />
@@ -33,7 +42,7 @@ const LaunchCourse = () => {
                 className="mb-3"
               >
                 <Form.Control
-                  type="number"
+                  type="text"
                   placeholder="Course Duration"
                   {...register("duration", {
                     required: true,
@@ -42,22 +51,38 @@ const LaunchCourse = () => {
               </FloatingLabel>
             </Form.Group>
           </Row>
-
-          <Form.Group controlId="formGridPassword">
-            <FloatingLabel
-              controlId="floatingTextarea"
-              label="Phone Number"
-              className="mb-3"
-            >
-              <Form.Control
-                type="number"
-                placeholder="Phone Number"
-                {...register("number", {
-                  required: true,
-                })}
-              />
-            </FloatingLabel>
-          </Form.Group>
+          <Row>
+            <Form.Group as={Col} controlId="formGridPassword">
+              <FloatingLabel
+                controlId="floatingTextarea"
+                label="Phone Number"
+                className="mb-3"
+              >
+                <Form.Control
+                  type="number"
+                  placeholder="Phone Number"
+                  {...register("number", {
+                    required: true,
+                  })}
+                />
+              </FloatingLabel>
+            </Form.Group>
+            <Form.Group as={Col} controlId="formGridPassword">
+              <FloatingLabel
+                controlId="floatingTextarea"
+                label="Banner"
+                className="mb-3"
+              >
+                <Form.Control
+                  type="url"
+                  placeholder="banner"
+                  {...register("banner", {
+                    required: true,
+                  })}
+                />
+              </FloatingLabel>
+            </Form.Group>
+          </Row>
 
           <Form.Group controlId="formGridPassword">
             <FloatingLabel

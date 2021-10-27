@@ -4,7 +4,7 @@ import { Tab, Table } from "react-bootstrap";
 const MentorList = () => {
   return (
     <Tab.Pane eventKey="first">
-      <h2>First Something</h2>
+      <h2 className="text-center fw-bold">Mentors</h2>
       <div className="p-4 bg-light rounded-3">
         <Table striped bordered hover variant="light">
           <thead>

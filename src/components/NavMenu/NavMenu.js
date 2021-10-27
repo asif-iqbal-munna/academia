@@ -64,12 +64,12 @@ const NavMenu = ({ bgColor }) => {
                   Register
                 </Button>
               </Link>
-              <Link to="/admin">
+              <Link to="/mentors">
                 <Button
                   variant="outline-primary"
                   className="text-dark d-block d-sm-inline-block mt-3 mt-md-0"
                 >
-                  Admin
+                  Mentors
                 </Button>
               </Link>
             </div>

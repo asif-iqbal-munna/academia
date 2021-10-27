@@ -1,12 +1,12 @@
 import "./App.css";
-import Header from "./components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Courses from "./components/Courses/Courses";
 import NotFound from "./components/NotFound/NotFound";
 import LaunchCourse from "./LaunchCourse/LaunchCourse";
 import Register from "./components/Register/Register";
-import Admin from "./components/Admin/Admin";
+import Admin from "./components/Mentors/Mentors";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
@@ -29,9 +29,9 @@ function App() {
             <Register />
           </Route>
           <Route exact path="/login">
-            <Courses />
+            <Login />
           </Route>
-          <Route exact path="/admin">
+          <Route exact path="/mentors">
             <Admin />
           </Route>
           <Route path="*">

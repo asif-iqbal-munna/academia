@@ -9,7 +9,7 @@
 }
 
 header .menu-link:hover {
-  color: #0dcaf0 !important;
+  color: #000 !important;
 }
 
 @media only screen and (max-width: 768px) {

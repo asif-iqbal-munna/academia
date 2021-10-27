@@ -1,8 +1,10 @@
 import React from "react";
+import Header from "../Header/Header";
 
 const Home = () => {
   return (
     <div>
+      <Header />
       <h2>
         From HomePositron emission tomography, also called PET imaging or a PET
         scan, is a type of nuclear medicine imaging. Nuclear medicine uses small

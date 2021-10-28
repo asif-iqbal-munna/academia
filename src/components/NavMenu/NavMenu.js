@@ -43,7 +43,7 @@ const NavMenu = ({ bgColor }) => {
                 fontWeight: "bold",
                 color: "#110df0",
               }}
-              to="/courses"
+              to="/programs"
             >
               My Programs
             </Nav.Link>

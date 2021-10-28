@@ -1,7 +1,7 @@
 import React from "react";
 import NavMenu from "../NavMenu/NavMenu";
 
-const Courses = () => {
+const MyPrograms = () => {
   return (
     <div>
       <NavMenu bgColor="light" />
@@ -12,4 +12,4 @@ const Courses = () => {
   );
 };
 
-export default Courses;
+export default MyPrograms;
